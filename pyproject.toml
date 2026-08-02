@@ -1,0 +1,21 @@
+[project]
+name = "py-ai-memory"
+version = "2.0.0"
+description = "Persistent memory system for AI coding agents"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+light = ["fastembed>=0.3.0"]
+full = ["sentence-transformers>=2.2.0"]
+mcp = ["mcp>=1.0.0"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+memory = "py_ai_memory.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["py_ai_memory"]
